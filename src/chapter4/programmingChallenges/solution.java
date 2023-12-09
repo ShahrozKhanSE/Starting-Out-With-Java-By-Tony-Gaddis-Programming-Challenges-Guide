@@ -1,11 +1,6 @@
 package src.chapter4.programmingChallenges;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.zip.ZipFile;
 
 public class solution {
     /**
@@ -38,14 +33,14 @@ public class solution {
      * Input Validation: Do not accept a negative number for speed and do not accept any value
      * less than 1 for time traveled.
      */
-    public static void solutionNo2(){
+    public static void solutionNo2() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the time in hours");
         int time = scanner.nextInt();
         System.out.println("Please enter the speed of the vehicle");
         int speed = scanner.nextInt();
         int distance = 0;
-        while (time < 1 || speed < 0){
+        while (time < 1 || speed < 0) {
             System.out.println("Please enter valid inputs");
             System.out.println("Please enter the time in hours");
             time = scanner.nextInt();
@@ -55,8 +50,8 @@ public class solution {
         distance = speed * time;
         int distanceInAnHour = distance / time;
         System.out.println("Hour                 \t        Distance Traveled");
-        for (int i = 1; i <= time ; i++) {
-            System.out.println(i+"                      "+distanceInAnHour*i );
+        for (int i = 1; i <= time; i++) {
+            System.out.println(i + "                      " + distanceInAnHour * i);
         }
     }
 
@@ -66,7 +61,7 @@ public class solution {
      * editor to confirm the output.
      */
 
-    public static void solutionNo3(){
+    public static void solutionNo3() {
 
     }
 
@@ -78,14 +73,14 @@ public class solution {
      * amount, not the number of pennies.
      * Input Validation: Do not accept a number less than 1 for the number of days worked.
      */
-    public static void solutionNo4(){
-        Scanner scanner = new  Scanner(System.in);
+    public static void solutionNo4() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the no of days");
         int noOfDays = scanner.nextInt();
         double salary = 1;
         for (int i = 1; i <= noOfDays; i++) {
-                System.out.println("Day " + i + " salary = " + salary / 100 + "$");
-                salary = salary * 2;
+            System.out.println("Day " + i + " salary = " + salary / 100 + "$");
+            salary = salary * 2;
         }
     }
 
@@ -94,7 +89,7 @@ public class solution {
      * The program should count and display the number of times that the specified character
      * appears in the string.
      */
-    public static void solutionNo5(){
+    public static void solutionNo5() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter a string");
         String string = scanner.nextLine();
@@ -102,11 +97,11 @@ public class solution {
         char character = scanner.next().charAt(0);
         int j = 0;
         for (int i = 0; i < string.length(); i++) {
-            if (string.charAt(i) == character){
+            if (string.charAt(i) == character) {
                 j++;
             }
         }
-        System.out.println(character+" has appeared "+ j + " times in the string");
+        System.out.println(character + " has appeared " + j + " times in the string");
     }
 
     /**
@@ -115,7 +110,7 @@ public class solution {
      * specified character appears in the file. Use Notepad or another text editor to create a simple
      * file that can be used to test the program.
      */
-    public static void solutionNo6(){
+    public static void solutionNo6() {
 
     }
 
@@ -132,11 +127,11 @@ public class solution {
      * a number less than 10 for the number of rooms on a floor.
      */
 
-    public static void solutionNo7(){
+    public static void solutionNo7() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the no of floors in the hotel");
         int floors = scanner.nextInt();
-        while (floors < 1){
+        while (floors < 1) {
             System.out.println("Please enter a valid amount");
             System.out.println("Please enter the no of floors in the hotel");
             floors = scanner.nextInt();
@@ -144,16 +139,16 @@ public class solution {
         double totalNoOfRooms = 0;
         double totalNoOfOccupiedRooms = 0;
         for (int i = 0; i <= floors; i++) {
-            System.out.println("Please enter the no of rooms on floor "+ i);
+            System.out.println("Please enter the no of rooms on floor " + i);
             int rooms = scanner.nextInt();
-            while (rooms < 10){
+            while (rooms < 10) {
                 System.out.println("Please enter a valid amount");
-                System.out.println("Please enter the no of rooms on floor "+ i);
+                System.out.println("Please enter the no of rooms on floor " + i);
                 rooms = scanner.nextInt();
             }
             System.out.println("Please enter the no of occupied rooms");
             int occupied = scanner.nextInt();
-            while (occupied > rooms){
+            while (occupied > rooms) {
                 System.out.println("Please enter valid no of occupied rooms");
                 System.out.println("Please enter the no of occupied rooms");
                 occupied = scanner.nextInt();
@@ -161,10 +156,10 @@ public class solution {
             totalNoOfRooms = totalNoOfRooms + rooms;
             totalNoOfOccupiedRooms = totalNoOfOccupiedRooms + occupied;
         }
-        System.out.println("Total no of rooms = "+totalNoOfRooms);
+        System.out.println("Total no of rooms = " + totalNoOfRooms);
         System.out.println("Total no of occupied rooms = " + totalNoOfOccupiedRooms);
-        System.out.println("Total no of vacant rooms = " + (totalNoOfRooms-totalNoOfOccupiedRooms));
-        System.out.println("Occupancy rate = "+ totalNoOfOccupiedRooms/totalNoOfRooms);
+        System.out.println("Total no of vacant rooms = " + (totalNoOfRooms - totalNoOfOccupiedRooms));
+        System.out.println("Occupancy rate = " + totalNoOfOccupiedRooms / totalNoOfRooms);
     }
 
     /**
@@ -177,13 +172,13 @@ public class solution {
      * Input Validation: Do not accept a number less than 1 for the number of years. Do not
      * accept negative numbers for the monthly rainfall.
      */
-    public static void solutionNo8(){
+    public static void solutionNo8() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the number of years");
         int years = scanner.nextInt();
         int months = 12;
         int totalRainfall = 0;
-        while (years < 1){
+        while (years < 1) {
             System.out.println("Please enter valid number of years");
             System.out.println("Please enter the number of years");
             years = scanner.nextInt();
@@ -193,7 +188,7 @@ public class solution {
             for (int j = 0; j < months; j++) {
                 System.out.println("Please enter the inches of rainfall this month");
                 int rainfall = scanner.nextInt();
-                while (rainfall < 0){
+                while (rainfall < 0) {
                     System.out.println("Please enter a valid value");
                     System.out.println("Please enter the inches of rainfall this month");
                     rainfall = scanner.nextInt();
@@ -201,9 +196,9 @@ public class solution {
                 totalRainfall = totalRainfall + rainfall;
             }
         }
-        System.out.println("Total no of months are " + months *years );
-        System.out.println("Total inches of rainfall is "+ totalRainfall);
-        System.out.println("Average inches of rainfall per month is "+ totalRainfall /(months * years));
+        System.out.println("Total no of months are " + months * years);
+        System.out.println("Total inches of rainfall is " + totalRainfall);
+        System.out.println("Average inches of rainfall per month is " + totalRainfall / (months * years));
     }
 
     /**
@@ -217,54 +212,53 @@ public class solution {
      * Do not accept a negative number for average daily population increase. Do not accept a
      * number less than 1 for the number of days they will multiply.
      */
-    public static void solutionNo9(){
+    public static void solutionNo9() {
         Scanner scanner = new Scanner(System.in);
         double population = 0;
         System.out.println("Please enter the starting no of the organisms");
         double organisms = scanner.nextDouble();
-        while (organisms < 2){
+        while (organisms < 2) {
             System.out.println("PLease enter a minimum of 2 starting organisms");
             System.out.println("Please enter the starting no of the organisms");
             organisms = scanner.nextDouble();
         }
         System.out.println("Please enter the daily percentage of population Increase");
         double dailyPopulationIncrease = scanner.nextDouble();
-        while (dailyPopulationIncrease < 0){
+        while (dailyPopulationIncrease < 0) {
             System.out.println("Please enter a valid value");
             System.out.println("Please enter the daily percentage of population Increase");
             dailyPopulationIncrease = scanner.nextDouble();
         }
         System.out.println("Please enter the number of days they will multiply");
         int days = scanner.nextInt();
-        while (days < 1){
+        while (days < 1) {
             System.out.println("Please enter valid no of days");
             System.out.println("Please enter the number of days they will multiply");
             days = scanner.nextInt();
         }
         for (int i = 1; i <= days; i++) {
-            population = organisms * (i * dailyPopulationIncrease/100);
-            System.out.println("The size of population on day "+ i + " is "+ population);
+            population = organisms * (i * dailyPopulationIncrease / 100);
+            System.out.println("The size of population on day " + i + " is " + population);
         }
     }
 
     /**
-     *Write a program with a loop that lets the user enter a series of integers. The user should
+     * Write a program with a loop that lets the user enter a series of integers. The user should
      * enter −99 to signal the end of the series. After all the numbers have been entered, the program
      * should display the largest and smallest numbers entered.
      */
-    public static void solutionNo10(){
+    public static void solutionNo10() {
         Scanner scanner = new Scanner(System.in);
         int largest = 0;
         int smallest = 0;
         int value = 0;
-        while (value != -99){
+        while (value != -99) {
 
             System.out.println("Please enter a number. Enter -99 to end");
             value = scanner.nextInt();
-            if (value == -99){
+            if (value == -99) {
                 break;
-            }else
-            if (value > largest){
+            } else if (value > largest) {
                 largest = value;
             } else if (value < smallest) {
                 smallest = value;
@@ -283,9 +277,9 @@ public class solution {
      * use a loop to display the table.
      */
 
-    public static void solutionNo11(){
+    public static void solutionNo11() {
         for (int i = 0; i <= 20; i++) {
-            System.out.println(i+ " Degree = " + ((9/5) * i + 32) + " Fahrenheit");
+            System.out.println(i + " Degree = " + ((9 / 5) * i + 32) + " Fahrenheit");
         }
     }
 
@@ -306,7 +300,7 @@ public class solution {
      * Store 4: ********
      * Store 5: *******************
      */
-    public static void solutionNo12(){
+    public static void solutionNo12() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter today's sales for store 1");
         int store1 = scanner.nextInt();
@@ -320,39 +314,38 @@ public class solution {
         int store5 = scanner.nextInt();
 
 
-
-            System.out.print("Store 1 : ");
-            for (int j = 0; j < store1/100; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        System.out.print("Store 1 : ");
+        for (int j = 0; j < store1 / 100; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
 
 
         System.out.print("Store 2 : ");
 
-            for (int j = 0; j < store2/100; j++) {
-                System.out.print("*");
-            }
-            System.out.println();
+        for (int j = 0; j < store2 / 100; j++) {
+            System.out.print("*");
+        }
+        System.out.println();
 
 
         System.out.println("Store 3 : ");
         for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < store3/100; j++) {
+            for (int j = 0; j < store3 / 100; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
         System.out.println("Store 4 : ");
         for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < store4/100; j++) {
+            for (int j = 0; j < store4 / 100; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
         System.out.println("Store 5 : ");
         for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < store5/100; j++) {
+            for (int j = 0; j < store5 / 100; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -365,7 +358,7 @@ public class solution {
      * month, and keep a running total. When the loop finishes, the program should display the
      * amount that the user is over or under budget.
      */
-    public static void solutionNo16(){
+    public static void solutionNo16() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your budget for this month");
         double budget = scanner.nextDouble();
@@ -377,10 +370,9 @@ public class solution {
             total = total + scanner.nextDouble();
         }
         System.out.println("Your total expense is " + total);
-        if (total < budget){
+        if (total < budget) {
             System.out.println("You are under budget");
-        }
-        else if (total > budget){
+        } else if (total > budget) {
             System.out.println("You are over budget");
         }
     }
@@ -392,14 +384,14 @@ public class solution {
      * should display “Too low, try again.” The program should use a loop that repeats until the
      * user correctly guesses the random number.
      */
-    public static void solutionNo17(){
+    public static void solutionNo17() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the number guessing game.\n The computer has randomly selected a number between 1 and 100");
         System.out.println("Take a guess until you succeed");
         int input = scanner.nextInt();
         int random = (int) (Math.random() * (100 - 1) + 1);
 
-        while(input != random) {
+        while (input != random) {
 
 
             if (input < random) {
@@ -424,15 +416,15 @@ public class solution {
      * of the number of guesses that the user makes. When the user correctly guesses the random
      * number, the program should display the number of guesses.
      */
-    public static void solutionNo18(){
+    public static void solutionNo18() {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Welcome to the number guessing game.\n The computer has randomly selected a number between 1 and 100");
         System.out.println(" Take a guess until you succeed");
         int input = scanner.nextInt();
         int random = (int) (Math.random() * (100 - 1) + 1);
         int i = 0;
-        while(input != random){
-            if (input < random){
+        while (input != random) {
+            if (input < random) {
                 System.out.println("Too low try again");
                 input = scanner.nextInt();
             } else if (input > random) {
@@ -441,9 +433,9 @@ public class solution {
             }
             i++;
         }
-        if (input == random){
+        if (input == random) {
             System.out.println("Congratulations you got it");
-            System.out.println("You took "+ (i + 1) + " tries");
+            System.out.println("You took " + (i + 1) + " tries");
         }
     }
 
@@ -502,29 +494,28 @@ public class solution {
      * wins, and the number of times that the user wins. After the loop performs all of its iterations,
      * the program should display who was the grand winner, the computer or the user.
      */
-    public static void solutionNo20(){
+    public static void solutionNo20() {
         System.out.println("The Dice Game");
         int player = 0;
         int computer = 0;
         for (int i = 0; i < 10; i++) {
-            
+
             int computersDice = (int) (Math.random() * (6 - 1) + 1);
             int playersDice = (int) (Math.random() * (6 - 1) + 1);
             System.out.println("Computer's Dice = " + computersDice);
-            System.out.println("Player's Dice = "+ playersDice);
-            if (computersDice > playersDice){
+            System.out.println("Player's Dice = " + playersDice);
+            if (computersDice > playersDice) {
                 System.out.println("Computer won!");
                 computer++;
             } else if (playersDice > computersDice) {
                 System.out.println("Player won!");
                 player++;
-            }
-            else {
+            } else {
                 System.out.println("It's a tie");
             }
         }
         System.out.println("The grand winner is ");
-        if (player > computer){
+        if (player > computer) {
             System.out.println("Player");
         } else if (computer > player) {
             System.out.println("Computer");
@@ -555,7 +546,7 @@ public class solution {
      * repeated. If not, the program displays the total amount of money entered into the slot
      * machine and the total amount won.Decision Structures
      */
-    public static void solutionNo21(){
+    public static void solutionNo21() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the amount of money you want to enter in the slot machine");
         int money = scanner.nextInt();
@@ -564,59 +555,59 @@ public class solution {
         int spin3 = (int) (Math.random() * (5) + 1);
         int winnings = 0;
         //Cherries, Oranges, Plums, Bells, Melons, Bars
-        if (spin1 == 0 ){
+        if (spin1 == 0) {
             System.out.println("Cherries");
-        } else if (spin1 == 1 ){
+        } else if (spin1 == 1) {
             System.out.println("Oranges");
-        }else if (spin1 == 2 ){
+        } else if (spin1 == 2) {
             System.out.println("Plums");
-        }else if (spin1 == 3 ){
+        } else if (spin1 == 3) {
             System.out.println("Bells");
-        }else if (spin1 == 4 ){
+        } else if (spin1 == 4) {
             System.out.println("Melons");
-        }else if (spin1 == 5 ){
+        } else if (spin1 == 5) {
             System.out.println("Bars");
         }
-        if (spin2 == 0 ){
+        if (spin2 == 0) {
             System.out.println("Cherries");
-        } else if (spin2 == 1 ){
+        } else if (spin2 == 1) {
             System.out.println("Oranges");
-        }else if (spin2 == 2 ){
+        } else if (spin2 == 2) {
             System.out.println("Plums");
-        }else if (spin2 == 3 ){
+        } else if (spin2 == 3) {
             System.out.println("Bells");
-        }else if (spin2 == 4 ){
+        } else if (spin2 == 4) {
             System.out.println("Melons");
-        }else if (spin2 == 5 ){
+        } else if (spin2 == 5) {
             System.out.println("Bars");
         }
-        if (spin3 == 0 ){
+        if (spin3 == 0) {
             System.out.println("Cherries");
-        } else if (spin3 == 1 ){
+        } else if (spin3 == 1) {
             System.out.println("Oranges");
-        }else if (spin3 == 2 ){
+        } else if (spin3 == 2) {
             System.out.println("Plums");
-        }else if (spin3 == 3 ){
+        } else if (spin3 == 3) {
             System.out.println("Bells");
-        }else if (spin3 == 4 ){
+        } else if (spin3 == 4) {
             System.out.println("Melons");
-        }else if (spin3 == 5 ){
+        } else if (spin3 == 5) {
             System.out.println("Bars");
         }
 
-        if (spin1 == spin2 && spin2 == spin3){
+        if (spin1 == spin2 && spin2 == spin3) {
             winnings = winnings + (money * 3);
             System.out.println("You won " + money * 3);
-        } else if (spin1 == spin2 || spin1 == spin3 || spin2 == spin3){
+        } else if (spin1 == spin2 || spin1 == spin3 || spin2 == spin3) {
             winnings = winnings + (money * 2);
             System.out.println("You won " + money * 2);
         }
 
         System.out.println("Enter y if you want to play again or enter n to end");
         char decision = scanner.next().charAt(0);
-        if (decision == 'y'){
-         solutionNo21();
-        }else {
+        if (decision == 'y') {
+            solutionNo21();
+        } else {
             System.out.println("Your total winnings are " + winnings);
         }
 
